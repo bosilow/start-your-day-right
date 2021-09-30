@@ -3,29 +3,41 @@ body {
   margin: 0 10vw;
   color: #fff;
   font-family: "Noto Sans", sans-serif;
-  /* background-color: #222; */
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1920' height='1080' preserveAspectRatio='none' viewBox='0 0 1920 1080'%3e%3cg mask='url(%26quot%3b%23SvgjsMask2031%26quot%3b)' fill='none'%3e%3crect width='1920' height='1080' x='0' y='0' fill='url(%23SvgjsLinearGradient2032)'%3e%3c/rect%3e%3cpath d='M1920 0L1449.78 0L1920 88.34z' fill='rgba(255%2c 255%2c 255%2c .1)'%3e%3c/path%3e%3cpath d='M1449.78 0L1920 88.34L1920 453.02L1133.37 0z' fill='rgba(255%2c 255%2c 255%2c .075)'%3e%3c/path%3e%3cpath d='M1133.37 0L1920 453.02L1920 789.98L652.2399999999999 0z' fill='rgba(255%2c 255%2c 255%2c .05)'%3e%3c/path%3e%3cpath d='M652.2399999999998 0L1920 789.98L1920 864.45L204.63999999999976 0z' fill='rgba(255%2c 255%2c 255%2c .025)'%3e%3c/path%3e%3cpath d='M0 1080L348.74 1080L0 713.35z' fill='rgba(0%2c 0%2c 0%2c .1)'%3e%3c/path%3e%3cpath d='M0 713.35L348.74 1080L679.59 1080L0 533.7z' fill='rgba(0%2c 0%2c 0%2c .075)'%3e%3c/path%3e%3cpath d='M0 533.7L679.59 1080L1267.88 1080L0 246.87000000000006z' fill='rgba(0%2c 0%2c 0%2c .05)'%3e%3c/path%3e%3cpath d='M0 246.87000000000012L1267.88 1080L1517.91 1080L0 170.98000000000013z' fill='rgba(0%2c 0%2c 0%2c .025)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask2031'%3e%3crect width='1920' height='1080' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='0%25' y1='50%25' x2='100%25' y2='50%25' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient2032'%3e%3cstop stop-color='rgba(14%2c 42%2c 71%2c 1)' offset='0.05'%3e%3c/stop%3e%3cstop stop-color='rgba(63%2c 12%2c 68%2c 1)' offset='0.78'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
 }
 
-.header-title {
+.header {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1vh 15vw;
+}
+
+.header-title {
+  width: 30%;
   font-size: 3rem;
+  font-weight: 700;
+  /* word-wrap: break-word; */
   letter-spacing: 10px;
-  margin: 1vh 14vw;
-  background-color: #3f0c44;
   border-radius: 10px;
   cursor: pointer;
+  padding-right: 10vw;
 }
 
 .header-title:hover {
   opacity: 0.8;
 }
 
-p {
+.sub-title {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: 0.8rem;
+  align-items: center;
+  text-align: center;
+  max-width: 300px;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #fff;
 }
 
 .main-container {
@@ -36,6 +48,7 @@ p {
 .main-container div {
   position: relative;
   width: 50%;
+  overflow: hidden;
 }
 
 .fetch-btn {
@@ -97,20 +110,24 @@ p {
   }
 }
 
+.dog-img {
+  width: 100%;
+  height: auto;
+  margin: 3vh auto;
+  display: none;
+  border-radius: 5%;
+  cursor: pointer;
+  transition: transform 1s ease;
+}
+
+.dog-img:hover {
+  transform: scale(1.03);
+}
+
 .joke-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.dog-img {
-  width: 100%;
-  max-height: auto;
-  display: none;
-  margin-top: 2vh;
-  border: solid 3px #3f0c44;
-  border-radius: 5%;
-  cursor: pointer;
 }
 
 .joke-text {
@@ -157,4 +174,93 @@ p {
   display: flex;
   justify-content: center;
   text-transform: uppercase;
+}
+
+@media (max-width: 1500px) {
+  #dog-pointer-arrow {
+    margin-right: 5vw;
+  }
+}
+
+@media (max-width: 1180px) {
+  .joke-text {
+    max-width: 25vw;
+  }
+}
+
+@media (max-width: 760px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+}
+
+@media (max-width: 760px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+}
+
+@media (max-width: 760px) {
+  .header-title {
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 760px) {
+  .pointing-arrows {
+    display: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .main-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 760px) {
+  .main-container div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 760px) {
+  .fetch-btn {
+    margin: 1vh 0;
+  }
+}
+
+@media (max-width: 760px) {
+  #dog-btn {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 760px) {
+  .joke-text {
+    max-width: 30vw;
+    margin-top: 3vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .joke-text {
+    max-width: 60vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-title {
+    padding-right: 85px;
+  }
 }
