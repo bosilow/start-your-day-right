@@ -1,10 +1,11 @@
-# Start Your Day Right! - by bosilow
+# Start Your Day Right!
 
 ## Info
 
 Simple small React web app to boost your mood daily. Do you like dogs or jokes? Maybe both? Here you can get your daily dose.
 
 ## Preview
+![Untitled](https://user-images.githubusercontent.com/85502390/135483559-ef6128c6-bdc6-4a28-af74-516e1e01406d.gif)
 
 ## Author
 
